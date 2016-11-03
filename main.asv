@@ -15,7 +15,3 @@ g = 9.8;
 I = [I_xx 0 0; 0 I_yy 0; 0 0 I_zz];
 
 
-init_state = [0 0 3 0 0 0 0 0 0 0 0 0];
-sim('main_simulink');
-
-temp = 1;
