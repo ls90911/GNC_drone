@@ -1,7 +1,7 @@
 clear
 clc
 
-global k1 k2 l b I m g
+global k1 k2 l b I m g omega2_last_step
 %% drone parameters
 k1 = 6.11*10^-8;
 k2 = 1.5*10^-9;
@@ -14,6 +14,8 @@ m = 0.5;
 g = 9.8;
 I = [I_xx 0 0; 0 I_yy 0; 0 0 I_zz];
 
+%% 
+omega2_last_step = [0 0 0 0]';
 
 init_state = [0 0 3 0 0 0 0 0 0 0 0 0];
 sim('main_simulink');

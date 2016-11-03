@@ -1,7 +1,7 @@
 function [ d_state ] = drone_dynamics( u )
 %DRONE_DYNAMICS Summary of this function goes here
 %   Detailed explanation goes here
-global k1 k2 l b I m g
+global k1 k2 l b I m g 
 % x_earth = u(1);
 % y_earth = u(2);
 % z_earth = u(3);
