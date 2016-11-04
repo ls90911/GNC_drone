@@ -1,7 +1,7 @@
 function [ d_state ] = drone_dynamics( u )
 %DRONE_DYNAMICS Summary of this function goes here
 %   Detailed explanation goes here
-global k1 k2 l b I m g 
+global k1 k2 l b I m g K
 % x_earth = u(1);
 % y_earth = u(2);
 % z_earth = u(3);
@@ -22,7 +22,7 @@ V = [v_x_body v_y_body v_z_body]';
 %Eta = [phi theta psi]';
 Omega = [p q r]';
 
-K = [-k1*b k1*b k1*b -k1*b;k1*l k1*l -k1*l -k1*l;k2 -k2 k2 -k2];
+
 
 R_d_angle = [1 tan(theta)*sin(phi) tan(theta)*cos(phi);...
     0 cos(phi) -sin(phi);...
